@@ -163,7 +163,7 @@ const searchPokemon = async (pokemonId) => {
   
   // Indicador de carga
   elements.searchButton.disabled = true;
-  elements.searchIcon.src = './pokeball1.png';
+  elements.searchIcon.src = './img/pokeball1.png';
   clearError();
 
   // Obtener y procesar datos
@@ -172,7 +172,7 @@ const searchPokemon = async (pokemonId) => {
   if (!data) {
     showError('Pokémon no encontrado. Inténtalo de nuevo.');
     elements.searchButton.disabled = false;
-    elements.searchIcon.src = './poke2.png';
+    elements.searchIcon.src = './img/poke2.png';
     return;
   }
 
@@ -187,7 +187,7 @@ const searchPokemon = async (pokemonId) => {
 
   // Restaurar botón de búsqueda
   elements.searchButton.disabled = false;
-  elements.searchIcon.src = './poke2.png';
+  elements.searchIcon.src = './img/poke2.png';
 };
 
 //* EVENTOS BUSQUEDA Y NAVEGACION *//

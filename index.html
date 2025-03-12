@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P O K É D E X</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Tiny5&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./pokebola2.png">
+  <script defer src="poke.js"></script>
+</head>
+
+<body>
+  <div class="pokedex">
+    <header>
+      <h1>P O K É D E X</h1>
+      <p>¿QUÉ POKÉMON QUIERES DESCUBRIR?</p>
+    </header>
+
+    <div class="search-container">
+      <div class="search-form">
+        <input type="text" id="pokemonInput" placeholder="Nombre/número del Pokémon" />
+        <button id="searchButton"><img src="./pokeGo.png" class="pokeGo"></img></button>
+      </div>
+      <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <div id="pokemonInfo" class="pokemon-info hidden">
+      <div class="upper-info">
+        <article class="pokemon-header">
+          <h2 id="pokemonName"></h2>
+          <div class="pokemon-image-container"><div class="navigation-buttons">
+            <button id="prevButton" class="nav-button" disabled>◀</button>
+            <button id="nextButton" class="nav-button" disabled>▶</button>
+          </div>
+            <img id="pokemonImage" alt="Imagen del Pokémon" class="pokemon-image" />
+          </div>
+          <div class="pokemon-types-container" id="pokemonTypesContainer"></div>
+        </article>
+
+        <table>
+          <thead>
+            <tr>
+              <th>CARACTERÍSTICAS</th>
+              <th>VALOR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NÚMERO</td>
+              <td id="pokemonNumber"></td>
+            </tr>
+            <tr>
+              <td>HABILIDADES</td>
+              <td id="pokemonAbilities"></td>
+            </tr>
+            <tr>
+              <td>ALTURA</td>
+              <td id="pokemonHeight"></td>
+            </tr>
+            <tr>
+              <td>PESO</td>
+              <td id="pokemonWeight"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="description-container">
+        <h3>Descripción</h3>
+        <p id="pokemonDescription"></p>
+      </div>
+
+      <div class="stats-container">
+        <h2>ESTADÍSTICAS BASE</h2>
+        <div id="statsGrid" class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-name">PS</div>
+            <div class="stat-value" data-stat="hp"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Ataque</div>
+            <div class="stat-value" data-stat="attack"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Defensa</div>
+            <div class="stat-value" data-stat="defense"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Ataque-Esp</div>
+            <div class="stat-value" data-stat="special-attack"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Defensa-Esp</div>
+            <div class="stat-value" data-stat="special-defense"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-name">Velocidad</div>
+            <div class="stat-value" data-stat="speed"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="evolution-chain">
+        <h3>Cadena Evolutiva</h3>
+        <div id="evolutionChain" class="evolution-container"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
